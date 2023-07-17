@@ -1,0 +1,109 @@
+:root {
+    /* カスタム変数で色を定義 */
+    --color1: #01579B;
+    --color2: #00838F;
+    --color3: #FFD600;
+    --color4: #FF4081;
+    --color5: #F44336;
+}
+
+#lyrics {
+    /* 表示順序の指定 */
+    z-index: 10;
+    /* 上部に余白を持たせ、下部に余白を広げる */
+    padding: 3em 0 5em 0;
+    /* 行間の設定 */
+    line-height: 2em;
+    /* フォントサイズ */
+    font-size: 36px;
+    /* フォントの指定 */
+    font-family: "Shippori Mincho B1", serif;
+    /* テキストの選択を無効化 */
+    user-select: none;
+    /* カーソルの指定 */
+    cursor: pointer;
+}
+
+#lyrics #text {
+    /* フォントサイズ */
+    font-size: 25px;
+    /* フォントの太さ */
+    font-weight: 700;
+    /* テキストの背景にグラデーションを指定 */
+    background-image: linear-gradient(90deg, #673ab7, #e91e63);
+    /* テキストの背景をテキストにクリップする */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* テキストを透明にして背景を表示 */
+    color: transparent;
+    /* テキストの背景に複数のグラデーションを指定 */
+    background-image: linear-gradient(90deg, rgb(255, 167, 69), rgb(254, 134, 159), rgb(239, 122, 200), rgb(160, 131, 237), rgb(67, 174, 255), rgb(160, 131, 237), rgb(239, 122, 200), rgb(254, 134, 159), rgb(255, 167, 69));
+    /* 背景画像のサイズを指定 */
+    background-size: 200%;
+    /* アニメーションを指定 */
+    -webkit-animation: streamer 2s linear infinite;
+    animation: streamer 2s linear infinite;
+    /* フォントの指定 */
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+
+/* streamerアニメーションの定義 */
+
+@-webkit-keyframes streamer {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+@keyframes streamer {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+#header {
+    /* フォントサイズ */
+    font-size: 20px;
+    /* フォントの指定 */
+    font-family: 'Zen Kurenaido', sans-serif;
+    /* テキストの配置を中央に指定 */
+    text-align: center;
+}
+
+#play {
+    /* 幅 */
+    width: 20px;
+    /* 高さ */
+    height: 20px;
+}
+
+
+/* 歌詞が下からせり出してくるアニメーションの定義 */
+
+@keyframes showLyrics {
+    0% {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+#text>div {
+    /* 文字ごとに改行しない */
+    display: inline-block;
+}
+
+#text>div>div {
+    /* showLyricsアニメーションを指定 */
+    animation: showLyrics 0.5s;
+}

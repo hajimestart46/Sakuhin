@@ -1,0 +1,9 @@
+.img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url("./miku.png");
+    background-color: aqua;
+    background-size: cover;
+    z-index: 999;
+}

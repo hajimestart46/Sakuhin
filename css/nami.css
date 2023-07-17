@@ -1,0 +1,39 @@
+body {
+    /* 初期化：内外の余白をキャンセル */
+    margin: 0;
+    padding: 0;
+    /* 画面の高さを100%に設定 */
+    height: 100vh;
+    /* フレックスボックスを使って水平・垂直方向に中央揃え */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* グラデーション背景 */
+    background: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);
+    /* 背景画像のサイズを指定 */
+    background-size: 500%;
+    /* アニメーション実行：アニメーション名 時間 線形の無限繰り返し */
+    animation: bgAnimation 15s linear infinite;
+}
+
+.text {
+    color: #fff;
+    font-size: 30px;
+    /* 文字間隔 */
+    letter-spacing: 15px;
+}
+
+
+/* アニメーションの定義 */
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
