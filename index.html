@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TextAlive App API | lyric sheet example</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&amp;display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/regular.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/nami.css">
+    <link rel="stylesheet" href="css/miku.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <!-- ヘッダ / Header -->
+        <div id="header">
+            <!-- 再生コントロール / Playback control-->
+            <div id="control" class="far">
+                <!-- <a href="#" id="play" class="disabled">&#xf144;</a> -->
+                <a href="#" id="stop" class="disabled" style="text-decoration: none;">&#xf28d;</a>
+            </div>
+            <div>画面押したら再生できます。こちらのボタンはSTOPボタンです。</div>
+            <!-- アーティストと楽曲の情報 / Artist and song info -->
+            <div id="meta">
+                <div id="artist">artist: <span>-</span></div>
+                <div id="song">song: <span>-</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="img"></div>
+    <!-- 歌詞 / Lyrics text -->
+    <div id="lyrics">
+        <!-- 文字 / Text -->
+        <div id="text">
+        </div>
+        <!-- ビートバー / Beat bar -->
+        <div id="bar"></div>
+    </div>
+
+    <!-- 音源 / Audio souce -->
+    <div id="media"></div>
+
+    <!-- シークバー -->
+    <div id="seekbar">
+        <div></div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/textalive-app-api/dist/index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/miku.js"></script>
+</body>
+
+
+
+</html>
